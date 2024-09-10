@@ -26,14 +26,24 @@ public class SecondActivity extends AppCompatActivity {
         backBtn = findViewById(R.id.backButton);
 
         blinkAnimation = AnimationUtils.loadAnimation(this, R.anim.blink_animation);
+        Animation scaleUp = AnimationUtils.loadAnimation(this, R.anim.scale_up);
+        Animation scaleDown = AnimationUtils.loadAnimation(this, R.anim.scale_down);
 
-        tweenAnimBtn.setOnClickListener(view -> animationIV.startAnimation(blinkAnimation));
+        tweenAnimBtn.setOnClickListener(view -> {
+            tweenAnimBtn.startAnimation(scaleUp);
+            tweenAnimBtn.startAnimation(scaleDown);
+            animationIV.startAnimation(blinkAnimation);
+        });
 
         pauseBtn.setOnClickListener(view -> {
+            pauseBtn.startAnimation(scaleUp);
+            pauseBtn.startAnimation(scaleDown);
             animationIV.clearAnimation();
         });
 
         backBtn.setOnClickListener(v -> {
+            backBtn.startAnimation(scaleUp);
+            backBtn.startAnimation(scaleDown);
             finish();
             overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
         });

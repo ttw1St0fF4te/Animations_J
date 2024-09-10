@@ -18,27 +18,30 @@
 
     <Button
         android:id="@+id/frameAnimButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Старт"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:text="Start"
+        android:backgroundTint="@android:color/holo_red_dark"
         app:layout_constraintTop_toBottomOf="@id/animImageView"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
 
     <Button
         android:id="@+id/pauseButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Пауза"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:text="Pause"
+        android:backgroundTint="@android:color/holo_red_dark"
         app:layout_constraintTop_toBottomOf="@id/frameAnimButton"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
     <Button
         android:id="@+id/nextActivityButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Следующая анимация"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:text="Next Anim"
+        android:backgroundTint="@android:color/holo_red_dark"
         app:layout_constraintTop_toBottomOf="@id/pauseButton"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
